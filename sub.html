@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8">
+<link rel="stylesheet" href="general.css" />
+<script>
+   function isEmail() {
+    var str = document.getElementById("email").value;
+    var re = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+    if (re.test(str))return true;
+      else return false;
+    if(isEmpty(str)) return false;
+   }
+   function isEmpty(str){
+    return (str == null) || (str.length == 0);
+   }
+   function isName(){
+   var str = document.getElementById("name").value;
+	if(isEmpty(str)) return false;
+		else return true;
+	}
+	function test(){
+	if ((isEmail()) && (isName()) == true){
+	alert("Вы подписались на рассылку публикации.")}}
+  </script>
+</head>
+<body link="black" vlink="#cecece" alink="#ff0000">
+<style>
+   body {
+    background: url(back.jpg) top center no-repeat;
+	background-attachment: fixed;
+    background-size: 100%;
+   }
+ </style>
+ <footer>
+  <center><vg>ПОДПИСКА</vg></center>
+</footer>
+<br>
+ <div class="center">
+ <center><h2>Если вас заинтересовал сайт, можете подписаться!</h2><center>
+ </div>
+ <div class="frm">
+					<form>
+						<div class="form-wrap">
+							<input class="form-input" id="name" type="text" placeholder="Имя:" required="">
+						</div>
+                
+						<div class="form-wrap">
+							<input class="form-input" id="email" type="email" placeholder="Электронная почта:" required="">    
+						</div>
+						<div class="form-wrap">
+							<textarea class="form-input" id="message" placeholder="Что можно улучшить в сайте? Ваши пожелания и предложения:"></textarea>
+						</div>
+						<button class="button" id="submit" name="submit" onClick="test()"type="submit">ОТПРАВИТЬ</button>
+					</form>
+				</div>
+ </body>
+</html>
